@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">PongXXKotlin</string>
+    <string name="hello_world">Hello world!</string>
+    <!-- andbra: item itmSettingsText umgenannt -->
+    <string name="itmSettingsText">Settings</string>
+    <string name="errGetXAccel">getXAcceleration() fehlerhaft! Math.abs() verwenden!</string>
+    <string name="errGetYAccel">getYAcceleration() fehlerhaft! Math.abs() verwenden!</string>
+    <string name="tvHeaderText">Pong</string>
+    <string name="swEnableYAxisText">Y-Achse aktivieren?</string>
+    <string name="spnPositionLabelText">Position Spieler 1?</string>
+    <string name="spnTop">Oben</string>
+    <string name="spnBottum">Unten</string>
+    <string name="btnPlusText">+</string>
+    <string name="btnMinusText">-</string>
+    <string name="btnStartText">Starte Pong</string>
+    <string name="tvRoundsText">0</string>
+    <string name="tvRoundsLabelText">Runden</string>
+    <string name="swEnableBallToPlayerText">Aufschlag Spieler 1 erzwingen?</string>
+    <string name="swEnableKIText">Intelligente KI?</string>
+</resources>
