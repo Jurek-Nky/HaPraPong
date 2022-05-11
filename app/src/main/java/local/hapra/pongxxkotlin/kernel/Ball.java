@@ -33,8 +33,8 @@ public class Ball extends BitMapGameObject {
                 getContextWidth() / 2 - getGraphic().getWidth() / 2);
         getCoordinates().setY(
                 getContextHeight() / 2 - getGraphic().getHeight() / 2);
-        getSpeed().setX(x);
-        getSpeed().setY(y);
+        getSpeed().setX(x * 6);
+        getSpeed().setY(y * 6);
         getSpeed().setXDirection(
                 right ? Speed.X_DIRECTION_RIGHT
                         : Speed.X_DIRECTION_LEFT);

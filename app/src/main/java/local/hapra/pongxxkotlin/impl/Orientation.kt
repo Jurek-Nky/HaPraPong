@@ -8,6 +8,7 @@ import android.hardware.SensorManager
 
 
 import local.hapra.pongxxkotlin.kernel.OrientationAbstract
+import kotlin.math.abs
 
 /**
  * Zugriff auf den Beschleunigunssensor
@@ -46,26 +47,35 @@ class Orientation(context: Context) : OrientationAbstract(context) {
 
     override fun getXAcceleration(): Float {
         // TODO XAcceleration zurückgeben (Hinweis in der Oberklasse beachten!)
-        if (gyroX >= 90) {
+        if (gyroX >= 45) {
             return 10f
-        } else if (gyroX <= -90) {
+        }
+        if (gyroX <= -45) {
+            return 10f
+        }
+        if (gyroX > -3 && gyroX < 3) {
             return 0f
         }
-        return ((gyroX + 90) / 180) * 10
+        return abs(gyroX) / 45 * 10
     }
 
     override fun getYAcceleration(): Float {
         // TODO YAcceleration zurückgeben (Hinweis in der Oberklasse beachten!)
         if (gyroY >= 45) {
             return 10f
-        } else if (gyroY <= -45) {
+        }
+        if (gyroY <= -45) {
+            return 10f
+        }
+        if (gyroY > -3 && gyroY < 3) {
             return 0f
         }
-        return ((gyroY + 45) / 90) * 10    }
+        return abs(gyroY) / 45 * 10
+    }
 
     override fun getXDirection(): Int {
         // TODO XDirection zurückgeben (Hinweis in der Oberklasse beachten!)
-        if (gyroX < 0){
+        if (gyroX < 0) {
             return -1
         }
         return 1
@@ -73,7 +83,7 @@ class Orientation(context: Context) : OrientationAbstract(context) {
 
     override fun getYDirection(): Int {
         // TODO YDirection zurückgeben (Hinweis in der Oberklasse beachten!)
-        if (gyroY < 0){
+        if (gyroY < 0) {
             return -1
         }
         return 1
